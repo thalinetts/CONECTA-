@@ -1,6 +1,4 @@
-/* =========================================
-   KEYFRAMES (ANIMAÇÕES ÚNICAS)
-========================================= */
+/* ANIMAÇÕES  */
 @keyframes pv-fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -17,9 +15,7 @@
   100% { transform: scale(1); }
 }
 
-/* =========================================
-   CONTAINER
-========================================= */
+/*  CONTAINER  */
 .pv-container {
   display: flex;
   flex-direction: column;
@@ -31,9 +27,7 @@
   box-sizing: border-box;
 }
 
-/* =========================================
-   BANNER DE DESTAQUE (HERO)
-========================================= */
+/*  BANNER DE DESTAQUE  */
 .pv-hero {
   background-color: #004b9e;
   border-radius: 20px;
@@ -103,9 +97,7 @@
   color: #d1e3f8;
 }
 
-/* =========================================
-   CARTÕES DE ESTATÍSTICA (MINI CARDS)
-========================================= */
+/*  CARTÕES DE ESTATÍSTICA (MINI CARDS) */
 .pv-hero-estatisticas {
   display: flex;
   gap: 15px;
@@ -151,9 +143,7 @@
 .pv-estatistica-textos strong { margin: 0; font-size: 26px; color: #fff; }
 .pv-estatistica-textos p { margin: 0; font-size: 10px; font-weight: bold; color: #d1e3f8; }
 
-/* =========================================
-   GRID INFERIOR E SEÇÕES
-========================================= */
+/* GRID INFERIOR E SEÇÕES */
 .pv-listas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -195,9 +185,7 @@
 .pv-lista-scroll::-webkit-scrollbar-track { background: transparent; }
 .pv-lista-scroll::-webkit-scrollbar-thumb { background-color: #e2e8f0; border-radius: 10px; }
 
-/* =========================================
-   ITENS DAS LISTAS
-========================================= */
+/* ITENS DAS LISTAS */
 .pv-conquista-item,
 .pv-certificado-item {
   display: flex;
@@ -284,9 +272,7 @@
   color: #fff;
 }
 
-/* =========================================
-   RESPONSIVIDADE
-========================================= */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
   .pv-container { padding: 20px; }
   .pv-hero-cabecalho { flex-direction: column; gap: 20px; }
