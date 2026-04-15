@@ -8,7 +8,7 @@ import '../css/Doacoes.css';
 const Doacoes = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
- {/*DADOS ESTATICOS*/}s)
+ {/*DADOS ESTATICOS*/}
   const [campanhas, setCampanhas] = useState([
     {
       id: 1,
