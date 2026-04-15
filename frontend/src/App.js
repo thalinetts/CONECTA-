@@ -18,6 +18,8 @@ import GestaoVagas from './pages/jsx/GestaoDeVagas';
 import Candidatos from './pages/jsx/Candidatos';
 import Doacoes from './pages/jsx/Doacoes';  
 import Relatorios from './pages/jsx/Relatorios';
+import FAQ from './pages/jsx/FAQ';
+import SobreNos from './pages/jsx/SobreNos';
 
 import './App.css';
 
@@ -53,6 +55,8 @@ function App() {
             <Route path="/Candidatos" element ={<Candidatos/>} />
             <Route path="/Doacoes" element ={<Doacoes/>} />
             <Route path="/Relatorios" element ={<Relatorios/>} />
+            <Route path="/FAQ" element={<FAQ />} />
+            <Route path="/SobreNos" element={<SobreNos />} />
 
           </Routes>
           
