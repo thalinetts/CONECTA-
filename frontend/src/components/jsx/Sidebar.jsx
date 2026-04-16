@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
-  // Ícones Gerais
   LayoutDashboard, User, MessageSquare, Bell, Settings, HelpCircle, ChevronLeft, ChevronRight,
-  // Ícones Voluntário
   Search, Bookmark, Award,
-  // Ícones ONG
   Briefcase, Users, HeartHandshake, FileText,
-  // Ícones Admin
   ShieldCheck, Building2, AlertTriangle, PieChart
 } from 'lucide-react';
 
@@ -18,17 +14,11 @@ import logoImg from '../../images/identidade/logo.png';
 const Sidebar = ({ tipoUsuario = 'VOLUNTARIO' }) => {
   const [isExpanded, setIsExpanded] = useState(true);
 
-  // Normaliza o texto para garantir que sempre fique em MAIÚSCULO, 
-  // independente do que vier do Seletor ou do App.js
   const tipoNormalizado = tipoUsuario.toUpperCase();
 
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
   };
-
-  // ==========================================
-  // DEFINIÇÃO DOS MENUS POR TIPO DE USUÁRIO
-  // ==========================================
   
   const menuVoluntario = [
     { path: '/PainelVoluntario', icon: LayoutDashboard, label: 'Conquistas e Certificados' },
@@ -59,7 +49,7 @@ const Sidebar = ({ tipoUsuario = 'VOLUNTARIO' }) => {
       case 'ONG': return menuONG;
       case 'ADMIN': return menuAdmin;
       case 'VOLUNTARIO': 
-      case 'VISITANTE': // Visitante também pode ver o menu de voluntário por enquanto
+      case 'VISITANTE': 
       default: return menuVoluntario;
     }
   };
@@ -68,8 +58,6 @@ const Sidebar = ({ tipoUsuario = 'VOLUNTARIO' }) => {
 
   return (
     <aside className={`sidebar-container ${isExpanded ? 'expandida' : 'recolhida'}`}>
-      
-      {/* CABEÇALHO DA SIDEBAR */}
       <div className="sidebar-cabecalho">
         <div className="sidebar-logo">
           <img src={logoImg} alt="Conecta+" className="logo-icone-img" /> 
@@ -79,8 +67,6 @@ const Sidebar = ({ tipoUsuario = 'VOLUNTARIO' }) => {
           {isExpanded ? <ChevronLeft size={16} /> : <ChevronRight size={16} />}
         </button>
       </div>
-
-      {/* MENU PRINCIPAL DINÂMICO */}
       <nav className="sidebar-menu">
         {menuAtual.map((item, index) => {
           const Icone = item.icon;

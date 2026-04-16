@@ -1,0 +1,154 @@
+.central-body {
+  background-color: #0077b6;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.card-container {
+  background-color: #0077b6;
+  border: 4px solid #ffffff;
+  border-radius: 35px;
+  width: 100%;
+  max-width: 580px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.ong-header {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ong-logo {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ong-nome { font-size: 18px; color: #0077b6; margin: 0; font-weight: bold; }
+.ong-campanha { font-size: 13px; color: #00b4d8; margin: 2px 0; font-weight: bold; }
+
+.barra-progresso {
+  background: #e0e0e0;
+  height: 8px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.progresso-fill {
+  background: #0077b6;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.arrecadacao { font-size: 10px; font-weight: bold; color: #333; }
+
+.badge-doacao {
+  background: #ffffff;
+  color: #0077b6;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.sessao { margin-bottom: 20px; }
+.sessao-titulo { display: block; color: white; font-weight: bold; font-size: 14px; margin-bottom: 10px; }
+
+.grid-valores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.btn-valor {
+  background: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  color: #0077b6;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input-outro-valor {
+  grid-column: span 3;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.input-outro-valor input { border: none; outline: none; text-align: right; width: 80px; }
+
+.campo-texto {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.checkbox-area { color: white; display: flex; align-items: center; gap: 8px; font-size: 14px; margin-top: 5px; }
+.aviso-dados { color: white; font-size: 9px; margin: 4px 0 0 24px; opacity: 0.8; }
+
+.box-pagamento { background: white; border-radius: 15px; overflow: hidden; }
+.abas-pagamento { display: flex; border-bottom: 1px solid #f0f0f0; }
+.aba-item {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px 5px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #0077b6;
+  cursor: pointer;
+}
+.aba-item.ativo { border-bottom: 3px solid #0077b6; }
+
+.area-pix { display: flex; padding: 20px; gap: 15px; align-items: center; }
+.copy-paste { display: flex; border: 1px solid #ddd; border-radius: 5px; padding: 5px; margin: 8px 0; }
+.copy-paste input { border: none; width: 100%; font-size: 10px; outline: none; }
+.timer { font-size: 11px; color: #00b4d8; }
+.timer span { color: #0077b6; font-weight: bold; }
+
+.btn-gerar {
+  background: #28a745;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.campo-mensagem { width: 100%; height: 100px; border-radius: 15px; border: none; padding: 15px; box-sizing: border-box; }
+.btn-finalizar {
+  background: #f9a825;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
