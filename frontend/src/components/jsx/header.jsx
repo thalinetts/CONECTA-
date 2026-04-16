@@ -9,26 +9,30 @@ const Header = ({ isLoggedIn }) => {
     <header className="main-header">
       <div className="header-container">
         
+        {/* LOGO: Só aparece se o usuário for VISITANTE (não logado) */}
         {!isLoggedIn && (
           <NavLink to="/">
             <img src={logoImg} alt="Conecta+ Logo" className="logo-img" />
           </NavLink>
         )}
 
+        {/* NAVEGAÇÃO PRINCIPAL (Aparece para todos) */}
         <nav className="header-nav">
           <NavLink to="/Feed" className="nav-link nav-feed">FEED</NavLink>
           <NavLink to="/MuralVagas" className="nav-link nav-explorar">EXPLORAR</NavLink>
           <NavLink to="/SobreNos" className="nav-link nav-sobre">SOBRE NÓS</NavLink>
         </nav>
 
+        {/* BARRA DE PESQUISA */}
         <div className="search-container">
           <input type="text" className="search-input" placeholder="Buscar causas..." />
           <Search className="search-icon" size={16} strokeWidth={2} />
         </div>
 
-
+        {/* ÁREA DIREITA (Botões ou Perfil) */}
         <div className="header-actions">
           {isLoggedIn ? (
+            // --- VISUAL DO USUÁRIO LOGADO ---
             <div className="header-perfil-logado">
               <button className="btn-icone bg-azul-claro">
                 <Settings size={20} className="icone-azul" />
@@ -44,11 +48,13 @@ const Header = ({ isLoggedIn }) => {
                 <span className="arroba-usuario-header">@user</span>
               </div>
               
+              {/* O Avatar atualizado com SVG da Lucide */}
               <div className="avatar-usuario-header">
                 <User size={24} color="#ffffff" strokeWidth={2} />
               </div>
             </div>
           ) : (
+            // --- VISUAL DO VISITANTE (ANÔNIMO) ---
             <>
               <NavLink to="/CadastroUser" className="btn-link">
                 <button className="btn btn-cadastro">CADASTRO</button>

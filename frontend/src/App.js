@@ -34,7 +34,6 @@ import CadastroDeVaga from './pages/jsx/ONG/CadastroDeVaga';
 import PainelVoluntario from './pages/jsx/Voluntarios/PainelVoluntario';
 import MinhasInscricoes from './pages/jsx/Voluntarios/MinhasInscricoes';
 import Conquistas from './pages/jsx/Voluntarios/Conquistas';
-import CentralDoacoes from './pages/jsx/Voluntarios/CentralDoacoes';
 
 import PainelAdmin from './pages/jsx/SuperAdmin/PainelAdmin';
 
@@ -79,6 +78,7 @@ function App() {
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/SobreNos" element={<SobreNos />} />
             <Route path="/Feed" element={<Feed />} />
+  
 
             {/* --- ROTAS RESTRITAS: ONG --- */}
             <Route path="/DashboardONG" element={
