@@ -14,6 +14,8 @@ import Login from './pages/jsx/Visitantes/Login';
 import CadastroUser from './pages/jsx/Visitantes/CadastroUser';
 import RedefinirSenha from './pages/jsx/Visitantes/RedefinirSenha';
 import RedefinirSenhaGmail from './pages/jsx/Visitantes/RedefinirSenhaGmail';
+import Feed from './pages/jsx/Visitantes/Feed';
+
 import MuralVagas from './pages/jsx/Outros/MuralVagas';
 import FAQ from './pages/jsx/Outros/FAQ';
 import SobreNos from './pages/jsx/Outros/SobreNos';
@@ -21,33 +23,31 @@ import CentralNotificacoes from './pages/jsx/Outros/CentralNotificacoes';
 import Notificacoes from './pages/jsx/Outros/Notificacoes'; 
 import ChatBox from './pages/jsx/Outros/ChatBox';
 import Perfil from './pages/jsx/Outros/Perfil';
+
 import DashboardONG from './pages/jsx/ONG/PainelONG';
 import Candidatos from './pages/jsx/ONG/Candidatos';
 import Doacoes from './pages/jsx/ONG/Doacoes';  
 import Relatorios from './pages/jsx/ONG/Relatorios';
 import GestaoVagas from './pages/jsx/ONG/GestaoDeVagas';
 import CadastroDeVaga from './pages/jsx/ONG/CadastroDeVaga';
+
 import PainelVoluntario from './pages/jsx/Voluntarios/PainelVoluntario';
 import MinhasInscricoes from './pages/jsx/Voluntarios/MinhasInscricoes';
 import Conquistas from './pages/jsx/Voluntarios/Conquistas';
+import CentralDoacoes from './pages/jsx/Voluntarios/CentralDoacoes';
+
 import PainelAdmin from './pages/jsx/SuperAdmin/PainelAdmin';
 
 import './App.css';
 
-/**
- * COMPONENTE DE PROTEÇÃO DE ROTA
- * Ele verifica se o tipo do usuário logado está na lista de permissões.
- */
 const ProtectedRoute = ({ user, allowedTypes, children }) => {
   if (!allowedTypes.includes(user)) {
-    // Se não tiver permissão, manda para a Home
     return <Navigate to="/" replace />;
   }
   return children;
 };
 
 function App() {
-  // Estado global: 'visitante', 'voluntario', 'ong', 'admin'
   const [tipoUsuario, setTipoUsuario] = useState('visitante'); 
 
   const isLoggedIn = tipoUsuario !== 'visitante';
@@ -78,6 +78,7 @@ function App() {
             <Route path="/RedefinirSenhaGmail" element={<RedefinirSenhaGmail />} />
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/SobreNos" element={<SobreNos />} />
+            <Route path="/Feed" element={<Feed />} />
 
             {/* --- ROTAS RESTRITAS: ONG --- */}
             <Route path="/DashboardONG" element={
