@@ -1,8 +1,8 @@
 import React from 'react';
 
-import '../css/Homepage.css';
+import '../../css/Visitantes/Homepage.css';
 
-import heroImg from '../../images/ImgHome.png'; 
+import heroImg from '../../../images/ImgHome.png'; 
 
 const Homepage = () => {
   return (
@@ -56,7 +56,7 @@ const Homepage = () => {
       </div>
       <div className="hp-card-content">
         <p>Conecta+ é uma plataforma integrada que utiliza a tecnologia para profissionalizar a colaboração entre voluntários, doadores e instituições sociais.</p>
-        <img src={require('../../images/Img1.png')} alt="Transformação Digital" />
+        <img src={require('../../../images/Img1.png')} alt="Transformação Digital" />
       </div>
     </div>
 
@@ -68,7 +68,7 @@ const Homepage = () => {
       </div>
       <div className="hp-card-content">
         <p>Oferecemos um ecossistema confiável com verificação de perfis para garantir que a ajuda chegue com segurança a quem realmente precisa.</p>
-        <img src={require('../../images/Img2.png')} alt="Conexão Segura" />
+        <img src={require('../../../images/Img2.png')} alt="Conexão Segura" />
       </div>
     </div>
 
@@ -80,7 +80,7 @@ const Homepage = () => {
       </div>
       <div className="hp-card-content">
         <p>Facilitamos o encontro de voluntários com causas específicas através de geolocalização, transformando boas intenções em ações práticas e mensuráveis.</p>
-        <img src={require('../../images/Img3.png')} alt="Engajamento" />
+        <img src={require('../../../images/Img3.png')} alt="Engajamento" />
       </div>
     </div>
 
@@ -92,7 +92,7 @@ const Homepage = () => {
       </div>
       <div className="hp-card-content">
         <p>Nosso projeto é estrategicamente alinhado à Agenda 2030 da ONU, fortalecendo parcerias para o desenvolvimento sustentável e a redução de desigualdades.</p>
-        <img src={require('../../images/Img4.png')} alt="Metas Globais" />
+        <img src={require('../../../images/Img4.png')} alt="Metas Globais" />
       </div>
     </div>
 
@@ -108,7 +108,7 @@ const Homepage = () => {
     {[1, 2, 3].map((item) => (
       <div key={item} className="hp-ong-card">
         <div className="hp-ong-image-container">
-          <img src={require('../../images/ImgHome.png')} alt="ONG em destaque" />
+          <img src={require('../../../images/ImgHome.png')} alt="ONG em destaque" />
         </div>
         
         <div className="hp-ong-info">
@@ -148,7 +148,7 @@ const Homepage = () => {
     </div>
 
     <div className="hp-rewards-image">
-      <img src={require('../../images/Img5.png')} alt="Troféu de Conquistas" />
+      <img src={require('../../../images/Img5.png')} alt="Troféu de Conquistas" />
     </div>
 
   </div>

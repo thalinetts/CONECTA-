@@ -3,7 +3,7 @@ import {
   Search, Filter, Check, X, MessageSquare, 
   Eye, User, Briefcase, Star, Clock 
 } from 'lucide-react';
-import '../css/Candidatos.css';
+import '../../css/ONG/Candidatos.css';
 
 const Candidatos = () => {
 

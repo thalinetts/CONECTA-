@@ -1,7 +1,7 @@
 /*git*/
 import React from 'react';
-import VagasCard from '../../components/jsx/VagasCard'; 
-import '../css/MuralVagas.css';
+import VagasCard from '../../../components/jsx/VagasCard'; 
+import '../../css/Outros/MuralVagas.css';
 
 const MuralVagas = () => {
   const listaVagas = Array(8).fill({
@@ -9,7 +9,7 @@ const MuralVagas = () => {
     area: "Área de atuação",
     description: "Descrição bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
     location: "loc - cidade - UF",
-    image: require('../../images/imgex.jpg') 
+    image: require('../../../images/imgex.jpg') 
   });
 
   return (

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import '../css/ChatBox.css';
+import '../../css/Outros/ChatBox.css';
 import { FaPaperPlane, FaSearch } from 'react-icons/fa';
 
 // Importação das imagens conforme solicitado
-import imgAbrigo from '../../images/imgAbrigo.png';
-import imgCoracao from '../../images/imgCoracao.png';
+import imgAbrigo from '../../../images/imgAbrigo.png';
+import imgCoracao from '../../../images/imgCoracao.png';
 
 const ChatBox = () => {
   const [mensagem, setMensagem] = useState("");

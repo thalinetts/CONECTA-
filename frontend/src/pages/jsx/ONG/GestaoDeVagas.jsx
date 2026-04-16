@@ -3,7 +3,8 @@ import {
   Plus, Search, Filter, MapPin, Calendar, 
   Users, MoreVertical, Edit2, PauseCircle, CheckCircle, Trash2 
 } from 'lucide-react';
-import '../css/GestaoDeVagas.css';
+
+import '../../css/ONG/GestaoDeVagas.css';
 
 const GestaoVagas = () => {
   // Mock de dados das vagas criadas pela ONG

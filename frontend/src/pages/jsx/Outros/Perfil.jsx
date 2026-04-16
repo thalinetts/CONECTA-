@@ -4,7 +4,7 @@ import {
   FileText, Heart, ShieldCheck, Check, X, Image as ImageIcon, 
   MessageSquare, ThumbsUp, Calendar, Camera, User, Award, Clock, Star, Activity
 } from 'lucide-react';
-import '../css/Perfil.css'; 
+import '../../css/Outros/Perfil.css'; 
 
 const Perfil = ({ tipoUsuario = 'VOLUNTARIO' }) => {
   // Normaliza o tipo de usuário que vem da prop (do Seletor)

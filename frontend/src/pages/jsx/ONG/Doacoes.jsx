@@ -3,7 +3,7 @@ import {
   DollarSign, TrendingUp, Target, Download, Plus,
   Search, Filter, Heart, ArrowUpRight, ArrowDownRight, CreditCard, X
 } from 'lucide-react';
-import '../css/Doacoes.css';
+import '../../css/ONG/Doacoes.css';
 
 const Doacoes = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

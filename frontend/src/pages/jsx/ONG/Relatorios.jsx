@@ -3,7 +3,7 @@ import {
   BarChart2, Download, Calendar, Users, 
   Clock, FileText, Filter, Heart, ArrowUp
 } from 'lucide-react';
-import '../css/Relatorios.css';
+import '../../css/ONG/Relatorios.css';
 
 const Relatorios = () => {
   // Dados simulados para o gráfico de Voluntários por Mês

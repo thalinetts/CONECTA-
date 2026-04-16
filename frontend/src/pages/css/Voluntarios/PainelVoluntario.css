@@ -16,18 +16,19 @@
 }
 
 /* HEADER - Azul Conecta+ com textura suave */
+
 .pv-brand-header {
   /* O brilho e a cor agora ficam juntos na mesma propriedade, sem precisar esconder vazamentos */
   background: 
     radial-gradient(circle at 90% -20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
     linear-gradient(135deg, var(--conecta-blue) 0%, var(--conecta-blue-dark) 100%);
   border-radius: 24px;
-  padding: 50px 40px 70px 40px; /* Aumentei um pouco o padding inferior (70px) para acomodar melhor */
+  padding: 50px 40px 70px 40px; 
   color: white;
   position: relative;
-  margin-bottom: 80px; /* Espaço reservado para os cards flutuantes não empurrarem o conteúdo de baixo */
+  margin-bottom: 80px; 
   box-shadow: 0 15px 30px rgba(0, 127, 178, 0.15);
-  /* A linha "overflow: hidden;" foi REMOVIDA daqui! */
+
 }
 
 /* Efeito de círculos no fundo do header para não ficar vazio */

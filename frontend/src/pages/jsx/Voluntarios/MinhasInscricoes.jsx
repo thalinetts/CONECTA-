@@ -3,7 +3,7 @@ import {
   Bookmark, Building, MapPin, Calendar, 
   Clock, CheckCircle, XCircle, Eye, Trash2 
 } from 'lucide-react';
-import '../css/MinhasInscricoes.css';
+import '../../css/Voluntarios/MinhasInscricoes.css';
 
 const MinhasInscricoes = () => {
   const [filtroAtivo, setFiltroAtivo] = useState('TODAS');

@@ -9,7 +9,7 @@ import {
   PieChart, Pie, Cell
 } from 'recharts';
 
-import '../css/PainelAdmin.css';
+import '../../css/SuperAdmin/PainelAdmin.css';
 
 const PainelAdmin = () => {
   // Dados simulados para a tabela de logs (Log de Auditoria)

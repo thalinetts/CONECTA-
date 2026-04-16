@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import '../css/SobreNos.css';
+import '../../css/Outros/SobreNos.css';
 
-import img7 from '../../images/Img7.png';
-import img8 from '../../images/Img8.png';
-import equipeFoto from '../../images/equipe-foto.png';
+import img7 from '../../../images/Img7.png';
+import img8 from '../../../images/Img8.png';
+import equipeFoto from '../../../images/equipe-foto.png';
 
 const SobreNos = () => {
   const [form, setForm] = useState({

@@ -1,5 +1,5 @@
 import React, { useState, useMemo} from 'react';
-import '../css/CentralNotificacoes.css';
+import '../../css/Outros/CentralNotificacoes.css';
 
 const CentralNotificacoes = () => {
   const [filtroAtivo, setFiltroAtivo] = useState('Todas');

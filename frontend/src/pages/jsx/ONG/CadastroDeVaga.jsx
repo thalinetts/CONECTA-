@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import '../css/CadastroDeVaga.css';
+import '../../css/ONG/CadastroDeVaga.css';
 
 const CadastroDeVaga = () => {
+  // Estado inicial do formulário
   const [formData, setFormData] = useState({
     titulo: '',
     tipo: 'Presencial',
@@ -14,6 +15,7 @@ const CadastroDeVaga = () => {
 
   const [mensagem, setMensagem] = useState({ texto: '', tipo: '' });
 
+  // Gerencia múltipla seleção dos períodos
   const togglePeriodo = (periodo) => {
     const novos = formData.periodos.includes(periodo)
       ? formData.periodos.filter(p => p !== periodo)
@@ -36,37 +38,57 @@ const CadastroDeVaga = () => {
 
   const handlePublicar = () => {
     if (validarFormulario()) {
+      // TODO: Substituir por dados dinâmicos da API/Backend
+      // Aqui entrará a requisição POST (ex: axios.post('/api/vagas', formData))
+      
       setMensagem({ texto: '✅ Vaga publicada com sucesso!', tipo: 'sucesso' });
+      
+      // Limpar formulário após sucesso (opcional, dependendo do fluxo)
+      setFormData({
+        titulo: '', tipo: 'Presencial', cargaHoraria: '',
+        periodos: [], experiencia: 'Iniciante', vagasDisponiveis: '', descricao: ''
+      });
     } else {
       setMensagem({ texto: '❌ Por favor, preencha todos os campos obrigatórios.', tipo: 'erro' });
     }
 
-    setTimeout(() => setMensagem({ texto: '', tipo: '' }), 3000);
+    setTimeout(() => setMensagem({ texto: '', tipo: '' }), 4000);
+  };
+
+  const handleSalvarRascunho = () => {
+    // TODO: Substituir por dados dinâmicos da API/Backend
+    // Aqui entrará a requisição para salvar como rascunho (ex: axios.post('/api/vagas/rascunho', formData))
+    setMensagem({ texto: '💾 Rascunho salvo com sucesso!', tipo: 'sucesso' });
+    setTimeout(() => setMensagem({ texto: '', tipo: '' }), 4000);
   };
 
   return (
     <div className="container-publicar">
-      <main className="main-content">
-        <h1 className="titulo-pagina">CRIAR NOVA OPORTUNIDADE DE VOLUNTÁRIO</h1>
+      <main className="main-content cv-glass-panel">
+        <h1 className="titulo-pagina">Criar Nova Oportunidade de Voluntariado</h1>
+        <p className="subtitulo-pagina">Preencha os detalhes abaixo para encontrar o voluntário ideal.</p>
 
+        {/* INFORMAÇÕES BÁSICAS */}
         <section className="secao-formulario">
-          <h2 className="secao-titulo">INFORMAÇÕES BÁSICAS</h2>
+          <h2 className="secao-titulo">Informações Básicas</h2>
           <div className="campo-grupo">
-            <label className="label-obrigatorio">* Título da Vaga</label>
+            <label className="label-obrigatorio">Título da Vaga</label>
             <input 
               type="text" 
               className="input-padrao" 
               value={formData.titulo}
               onChange={(e) => setFormData({...formData, titulo: e.target.value})}
-              placeholder="Ex: Designer Gráfico"
+              placeholder="Ex: Professor de Informática Básica"
             />
           </div>
         </section>
+
+        {/* ONDE E QUANDO */}
         <section className="secao-formulario">
-          <h2 className="secao-titulo">ONDE E QUANDO</h2>
+          <h2 className="secao-titulo">Onde e Quando</h2>
           <div className="grid-duas-colunas">
             <div className="campo-grupo">
-              <label className="label-obrigatorio">* Tipo</label>
+              <label className="label-obrigatorio">Tipo de Vaga</label>
               <div className="container-chips">
                 {['Presencial', 'Remoto', 'Híbrido'].map(t => (
                   <button 
@@ -81,18 +103,20 @@ const CadastroDeVaga = () => {
             </div>
 
             <div className="campo-grupo">
-              <label className="label-obrigatorio">* Carga Horária Semanal (h)</label>
+              <label className="label-obrigatorio">Carga Horária Semanal (h)</label>
               <input 
                 type="number" 
                 className="input-padrao" 
                 value={formData.cargaHoraria}
+                placeholder="Ex: 4"
+                min="1"
                 onChange={(e) => setFormData({...formData, cargaHoraria: e.target.value})}
               />
             </div>
           </div>
 
           <div className="campo-grupo">
-            <label className="label-obrigatorio">* Período (Selecione ao menos um)</label>
+            <label className="label-obrigatorio">Período (Selecione ao menos um)</label>
             <div className="container-checkbox">
               {['Manhã', 'Tarde', 'Noite', 'Finais de Semana'].map(p => (
                 <label key={p} className="checkbox-item">
@@ -100,17 +124,20 @@ const CadastroDeVaga = () => {
                     type="checkbox" 
                     checked={formData.periodos.includes(p)}
                     onChange={() => togglePeriodo(p)}
-                  /> {p}
+                  /> 
+                  <span className="custom-checkbox"></span>
+                  {p}
                 </label>
               ))}
             </div>
           </div>
         </section>
 
+        {/* O QUE PRECISAMOS */}
         <section className="secao-formulario">
-          <h2 className="secao-titulo">O QUE PRECISAMOS</h2>
+          <h2 className="secao-titulo">Requisitos</h2>
           <div className="campo-grupo">
-            <label className="label-obrigatorio">* Nível de Experiência</label>
+            <label className="label-obrigatorio">Nível de Experiência</label>
             <div className="container-chips">
               {['Iniciante', 'Intermediário', 'Especialista'].map(exp => (
                 <button 
@@ -125,35 +152,40 @@ const CadastroDeVaga = () => {
           </div>
         </section>
 
+        {/* DETALHES DA VAGA */}
         <section className="secao-formulario">
-          <h2 className="secao-titulo">DETALHES DA VAGA</h2>
+          <h2 className="secao-titulo">Detalhes da Vaga</h2>
           <div className="campo-grupo">
-            <label className="label-obrigatorio">* Vagas Disponíveis</label>
+            <label className="label-obrigatorio">Vagas Disponíveis</label>
             <input 
               type="number" 
               className="input-padrao" 
               value={formData.vagasDisponiveis}
+              placeholder="Ex: 2"
+              min="1"
               onChange={(e) => setFormData({...formData, vagasDisponiveis: e.target.value})}
             />
           </div>
           <div className="campo-grupo">
-            <label className="label-obrigatorio">Descrição (opcional)</label>
+            <label className="label-obrigatorio">Descrição Completa</label>
             <textarea 
               className="textarea-padrao" 
               rows="5"
+              placeholder="Descreva as atividades, benefícios e o impacto que o voluntário causará..."
               value={formData.descricao}
               onChange={(e) => setFormData({...formData, descricao: e.target.value})}
             ></textarea>
           </div>
         </section>
 
+        {/* AÇÕES E FEEDBACK */}
         <div className="container-acoes">
-          <button className="btn-acao gray">Salvar Rascunho</button>
-          <button className="btn-acao" onClick={handlePublicar}>Publicar Vaga</button>
+          <button className="btn-acao gray" onClick={handleSalvarRascunho}>Salvar Rascunho</button>
+          <button className="btn-acao primary" onClick={handlePublicar}>Publicar Vaga</button>
         </div>
 
         {mensagem.texto && (
-          <div className={`alerta ${mensagem.tipo}`}>
+          <div className={`alerta slide-in ${mensagem.tipo}`}>
             {mensagem.texto}
           </div>
         )}

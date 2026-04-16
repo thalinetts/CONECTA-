@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/CadastroUser.css";
+import '../../css/Visitantes/CadastroUser.css';
 import { FaEye, FaEyeSlash, FaGoogle, FaApple, FaMicrosoft } from "react-icons/fa";
 
 const CadastroUser = () => {

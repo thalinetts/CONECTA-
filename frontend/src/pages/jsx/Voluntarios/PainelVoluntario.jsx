@@ -4,7 +4,7 @@ import {
   Download, Star, Zap, Target, Sparkles, 
   HeartHandshake, Flag
 } from 'lucide-react';
-import '../css/PainelVoluntario.css';
+import '../../css/Voluntarios/PainelVoluntario.css';
 
 const PainelVoluntario = () => {
   // Mocks de dados

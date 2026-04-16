@@ -10,9 +10,9 @@ import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer 
 } from 'recharts';
 
-import '../css/DashboardONG.css';
+import '../../css/ONG/PainelONG.css';
 
-const DashboardONG = () => {
+const PainelONG = () => {
   // INICIO DOS DADOS ESTATICOS PARA O GRÁFICO 
   const dadosGrafico = [
     { nome: 'Mar', doacoes: 150 },
@@ -211,4 +211,4 @@ const DashboardONG = () => {
   );
 };
 
-export default DashboardONG;
+export default PainelONG;

@@ -4,7 +4,7 @@ import {
   Calendar, Building, Medal, Trophy, Clock,
   Zap, Heart, Users
 } from 'lucide-react';
-import '../css/Conquistas.css';
+import '../../css/Voluntarios/Conquistas.css';
 
 const Conquistas = () => {
   return (
