@@ -31,9 +31,16 @@ const Sidebar = ({ tipoUsuario = 'VOLUNTARIO' }) => {
   // ==========================================
   
   const menuVoluntario = [
+<<<<<<< HEAD
     { path: '/PainelVoluntario', icon: LayoutDashboard, label: 'Conquistas e Certificados' },
     { path: '/MuralVagas', icon: Search, label: 'Explorar Vagas' },
     { path: '/MinhasInscricoes', icon: Bookmark, label: 'Minhas Inscrições' },
+=======
+    { path: '/PainelVoluntario', icon: LayoutDashboard, label: 'Dashboard' },
+    { path: '/MuralVagas', icon: Search, label: 'Explorar Vagas' },
+    { path: '/MinhasInscricoes', icon: Bookmark, label: 'Minhas Inscrições' },
+    { path: '/Conquistas', icon: Award, label: 'Conquistas e XP' },
+>>>>>>> upstream/main
     { path: '/ChatBox', icon: MessageSquare, label: 'Mensagens' }
   ];
 
