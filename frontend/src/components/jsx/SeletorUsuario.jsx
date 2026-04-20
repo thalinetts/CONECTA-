@@ -16,12 +16,10 @@ const SeletorUsuario = ({ usuarioAtual, setUsuarioAtual }) => {
       const telaLargura = window.innerWidth;
       const telaAltura = window.innerHeight;
 
-      // Descobre se está mais pro topo ou mais pro fundo
       const isTop = rect.top < telaAltura / 2;
-      // Descobre se está mais pra direita ou mais pra esquerda
       const isRight = rect.left > telaLargura / 2;
 
-      // Define a classe CSS correspondente
+  
       setClassePosicao(`menu-${isTop ? 'top' : 'bottom'}-${isRight ? 'right' : 'left'}`);
     }
     setAberto(!aberto);
