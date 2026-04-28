@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 import { Camera } from 'lucide-react'; 
 
 import '../css/Footer.css';

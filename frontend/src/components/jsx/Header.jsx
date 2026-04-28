@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Search, Settings, Bell, User, Menu, X } from 'lucide-react'; // <-- Adicionamos Menu e X
 import { NavLink } from 'react-router-dom';
